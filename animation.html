@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>ANIMATION</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="fonts/icomoon/style.css">
+  <link rel="icon" type="image/x-icon" href="images/153dfd85-344c-45bc-a5f3-05d79b434a98.jpeg">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+
+    }
+
+
+
+    .gallery-item {
+      position: relative;
+      cursor: pointer;
+    }
+
+    .gallery-item img, .gallery-item video {
+      width: 100%;
+      height: 100%;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item img:hover, .gallery-item video:hover {
+      transform: scale(1.05);
+    }
+
+    /* Modal and Slider Styling */
+    .video-wrap {
+  position: relative;
+  display: inline-block;
+  overflow: hidden; /* Hides anything that overflows */
+}
+
+.video-wrap video {
+  width: 100%; /* Makes the video responsive */
+  height: auto;
+  transition: opacity 0.5s ease; /* Smooth transition for opacity change */
+}
+
+.video-wrap:hover video {
+  opacity: 0.2; /* Change this value to adjust the fade effect */
+}
+
+.video-info {
+  position: absolute;
+  bottom: 20px; /* Vertical position */
+  left: 20px; /* Horizontal position */
+  color: white; /* Text color */
+  padding: 10px;
+  border-radius: 5px; /* Rounds the corners */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.5s ease; /* Smooth transition for opacity change */
+}
+
+.video-wrap:hover .video-info {
+  opacity: 1; /* Show the info on hover */
+}
+
+/* Hide video controls */
+.video-wrap video::-webkit-media-controls {
+  display: none !important;
+}
+
+.video-wrap video::-webkit-media-controls-enclosure {
+  display: none !important;
+}
+
+.video-wrap video {
+  pointer-events: none; /* Disable interaction with the video controls */
+}
+
+    /* Responsive adjustments */
+    @media (max-width: 1200px) {
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <button 
+  style="
+    position: absolute; /* Ensures it's placed relative to the page */
+    top: 10px; /* Adjust vertical positioning */
+    left: 10px; /* Adjust horizontal positioning */
+    color: aliceblue; 
+    border: none; 
+    padding: 15px 10px; /* Custom padding for height and width */
+    font-size: 24px; /* Custom font size */
+    background-color: rgba(240, 248, 255, 0); 
+    cursor: pointer; /* Changes cursor on hover */
+    border-radius: 8px; /* Optional: Adds rounded corners */
+    "
+  onclick="window.history.back()"> ← 
+</button>
+
+<link rel="stylesheet" href="css/lightgallery.min.css">  
+<script src="js/navigation.js"></script>
+<link rel="stylesheet" href="css/navigation.css">
+  
+<button id="nav-toggle" class="nav-toggle">☰</button>
+<div id="side-nav" class="side-nav-mobile ">
+    <nav class="site-navigation">
+        <ul class="site-menu js-clone-nav list-unstyled">
+          <li><a href="about.html">ABOUT US</a></li>
+          <li><a href="rendering.html">RENDERING</a></li>
+          <li><a href="animation.html">FILM AND ANIMATION</a></li>
+          <li><a href="360tour.html">360 TOUR</a></li>
+          <li><a href="about.html#services">SERVICES</a></li>
+          <li><a href="about.html#contact">CONTACT US</a></li>
+        </ul>
+    </nav>
+</div>
+<br>
+<br>
+<br>
+<div class="col-6 col-xl-2" data-aos="fade-down">
+  <h1 class="mb-0"><a href="index.html" class="text-white h2 mb-0">NEXARCH</a></h1>
+</div>
+<div class="site-wrap">
+  <!-- Gallery Section -->
+  <div class="site-section">
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-md-7">
+          <div class="row mb-5">
+            <div class="col-12">
+              <h2  class="text-center" style="color: wheat; margin-left: 20px;">FILM AND ANIMATION</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+        <div class="gallery" id="gallery">
+            <div class="gallery-item">
+              <br>  <h2 class="mb-0"><a href="DUBAIVIILA002.html" class="text-white h2 mb-0">DUBAI-VILLA002</a></h2>
+              <br>
+                <video src="images/website-georges/WEBSTE/DUBAI-VILLA002/video 03.mp4" controls></video>
+            
+            </div>
+            <div class="gallery-item">
+              <br>  <h2 class="mb-0"><a href="FAQRA 233-1.html" class="text-white h2 mb-0">FAQRA</a></h2>
+                <br>
+                <video src="images/website-georges/WEBSTE/FAQRA 233-1/VIDEo.mp4" controls></video>
+                
+            </div>
+            <div class="gallery-item">
+              <br>  <h2 class="mb-0"><a href="OMA-VILLA.html" class="text-white h2 mb-0">OMA VILLA</a></h2>
+              <br>
+                <video src="images/website-georges/WEBSTE/OMA-VILLA/oma-Villa.mp4" controls></video>
+               
+            </div>
+        </div>
+        
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    
+  </div>
+
+</body>
+<footer id="contact" style="background-color: #222; padding: 20px 0;">
+  <div style="max-width: 1200px; margin: 0 auto;">
+    <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+      <!-- Contact Us Column -->
+      <div style="flex: 1; min-width: 300px;">
+        <h4 style="color: black;">Contact Us</h4>
+        <p style="color: white;">Email: <a href="mailto:nex.arch12@gmail.com" style="color: white; text-decoration: none;">nex.arch12@gmail.com</a></p>
+        <p style="color: white;">Phone: <a href="tel:+96176118720" style="color: white; text-decoration: none;">+961 7611 8720</a></p>
+      </div>
+      
+      <!-- Follow Us Column -->
+      <div style="flex: 1; min-width: 300px;">
+        <h4 style="color: black;">Follow Us</h4>
+        <ul style="list-style: none; display: flex; gap: 15px; padding: 0;">
+          <li><a href="https://www.instagram.com/g.h.architect" style="color: white; text-decoration: none;"><span class="icon-instagram"></span> Instagram</a></li>
+          <li><a href="https://www.linkedin.com/company/nex-arch/" style="color: white; text-decoration: none;"><span class="icon-linkedin"></span> LinkedIn</a></li>
+          <li><a href="https://wa.me/96176118720" style="color: white; text-decoration: none;"><span class="icon-whatsapp"></span> WhatsApp</a></li>
+        </ul>
+      </div>
+
+      <!-- Our Location Column -->
+      <div style="flex: 1; min-width: 300px;">
+        <h4 style="color: black;">Our Location</h4>
+        <p style="color: white;">Beirut, Lebanon</p>
+      </div>
+    </div>
+
+    <!-- Footer Copyright -->
+    <div style="text-align: center; margin-top: 20px;">
+      <p style="color: white;">&copy; 2024 NexArch. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Inline CSS for Icon Margin -->
+<style>
+  /* Optional: Add some margin between icons */
+  .icon-instagram, .icon-linkedin, .icon-whatsapp {
+    margin-right: 10px;
+  }
+</style>
+<script>
+  // Select all video elements in the gallery
+  const videos = document.querySelectorAll('.gallery-item video');
+
+  videos.forEach((video) => {
+    video.addEventListener('play', () => {
+      // Pause all other videos
+      videos.forEach((otherVideo) => {
+        if (otherVideo !== video) {
+          otherVideo.pause();
+        }
+      });
+    });
+  });
+</script>
+</html>
